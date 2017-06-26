@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body class="video">
+        <h3>Sala: <%= room%></h3>
+        <input hidden="true" id="idRoom" value="<%= room %>"/>
+        <video width="320" height="240"></video>        
+        <script src="/vendor/adapter.js"></script>
+        <script src="/vendor/socket.io.js"></script>
+        <script src="/javascripts/p2p.js"></script>
+    </body>
+</html>
