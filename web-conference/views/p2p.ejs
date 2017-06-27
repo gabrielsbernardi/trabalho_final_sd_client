@@ -1,16 +1,25 @@
 <!DOCTYPE html>
+
     <head>
-        <link rel="stylesheet" href="/stylesheets/style.css">        
+        <link rel="stylesheet" href="/stylesheets/style.css">
     </head>
-    <body class="video">
-        <h3>Sala: <%= room%></h3>
-        <video width="320" height="240"></video>        
+
+    <body>
+        <div class="header">
+            <label>Sala: <%= room%></label>
+            <div class="div-sair">
+                <button onclick="exit()" class="sair">Voltar</button>
+            </div>
+        </div>
+        <br>
+        <video width="320" height="240"></video>
         <script src="/vendor/adapter.js"></script>
         <script src="/vendor/socket.io.js"></script>
         <script src="/javascripts/p2p.js"></script>
         <script>
             var idRoom = <%= room %>;
-            setRoom(idRoom);            
+            setRoom(idRoom);
         </script>
     </body>
+
 </html>

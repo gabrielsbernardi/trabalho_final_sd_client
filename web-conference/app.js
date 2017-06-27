@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/vendor/', express.static(__dirname + '/node_modules/socket.io-client/dist'));
-app.use('/vendor/', express.static(__dirname + '/node_modules/webrtc-adapter/out'));
+app.use('/vendor/', express.static(__dirname + '/node_modules/webrtc-adapter/'));
 
 
 // catch 404 and forward to error handler

@@ -115,6 +115,10 @@ const startApp = function (mediaStream) {
     });
 };
 
+function exit() {
+    window.location.href = "/";
+}
+
 const initializeApp = function () {
     navigator.mediaDevices.getUserMedia({audio: true, video: true})
         .then(mediaStream => {

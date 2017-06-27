@@ -1,14 +1,33 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body {  
+  font: "Calibri";
+  width: 100%;
 }
 
-a {
-  color: #00B7FF;
+.header {
+    background-color: cornflowerblue;
+    padding: 1%;
+    height: 100%;
+    font-family: "Calibri";
+    font-size: 30px;
+    color: honeydew;
 }
 
-.video-class {
-    text-align: center;
+.div-sair {
+    float: right;
+}
+.sair {
+    font-size: 25px;
+    float: right; 
+	border-radius: 2px;
+    border-color: cornflowerblue;
+	text-align: center;
+	background-color: honeydew;
+	font-weight: bold;
+	color: cornflowerblue;
+}
+
+.video-class {   
+    padding: 5%; 
 }
 
 button {
@@ -18,7 +37,7 @@ button {
 .view {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
 }
 
 .container {
