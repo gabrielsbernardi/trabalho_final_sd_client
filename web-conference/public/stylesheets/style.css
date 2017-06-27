@@ -1,12 +1,14 @@
 body {  
   font: "Calibri";
-  width: 100%;
+  margin-left: 10%;
+  width: 80%;
 }
 
 .header {
     background-color: cornflowerblue;
     padding: 1%;
     height: 100%;
+    width: 100%;
     font-family: "Calibri";
     font-size: 30px;
     color: honeydew;
@@ -43,4 +45,41 @@ button {
 .container {
     display: flex;
     flex-direction: column;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 40%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#showData {
+    padding: 2px;
+}
+
+.button-table {
+    border-radius: 2px;
+    border-style:solid;
+    padding: 2%; 
+    text-align: center;
+    width: 100%;
+}
+
+.cadastro {
+    border: solid 1px;
+    border-radius: 4px;
+    padding: 1%;
+    width: 38%; 
+    font-family: Calibri;
+    font-size: 17px;
 }

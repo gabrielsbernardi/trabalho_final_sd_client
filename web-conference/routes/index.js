@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/room', function(req, res, next) {  
   console.log('Room: ' + req.query.room);
-  res.render('p2p', {room: req.query.room});
+  res.render('p2p', {room: req.query.room, name: req.query.name});
 });
 
 router.get('/error', function(req, res, next) {    
