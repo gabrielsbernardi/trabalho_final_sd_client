@@ -1,6 +1,5 @@
 module.exports = function (io) {
-    const sockets = new Map();
-    var rooms = new Map();
+    const sockets = new Map();    
 
     io.sockets.on('connection', socket => {
 
@@ -25,14 +24,17 @@ module.exports = function (io) {
                 .emit('peerIceCandidate', { from: socket.id, candidate: ice.candidate });
         });
 
-        socket.on('disconnect', reason => {
-            sockets.delete(socket.id);
-            socket.to(reason.room).emit('peerDisconnected', { id: socket.id });
-            socket.leave(reason.room);
+        socket.on('disconnect', reason => {                        
+            var roomName = sockets.get(socket.id);
+            if (roomName) {
+                sockets.delete(socket.id);
+                socket.to(roomName[1]).emit('peerDisconnected', { id: socket.id });
+                socket.leave(roomName[1]);
+            }
         });
 
-        socket.on('subscribe', room => {
-            sockets.set(socket.id, socket);
+        socket.on('subscribe', room => {            
+            sockets.set(socket.id, [socket, room.name]);
             socket.join(room.name, () => {
                 console.log(`emitindo peerConnected para sala ${room.name}`);
                 socket.to(room.name).emit('peerConnected', { id: socket.id });

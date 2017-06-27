@@ -7,13 +7,9 @@ const peerConfig = null;
 var idRoom = ""; 
 const socket = io(); 
 
-window.onload = function() {
-    idRoom = document.getElementById('idRoom').value;
+function setRoom(room) {
+    idRoom = room;
 }
-
-window.onbeforeunload = function() {
-    socket.emit('disconnect', {room: idRoom});
-};
 
 const assignMediaStreamObject = function (mediaStream) {
     const video = document.querySelector('video');
