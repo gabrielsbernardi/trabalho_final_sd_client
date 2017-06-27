@@ -1,6 +1,20 @@
 <!DOCTYPE html>
   <head>
     <title>Web Conference</title>
+
+    <style>
+        table, th, td 
+        {
+            margin:10px 0;
+            border:solid 1px #333;
+            padding:2px 4px;
+            font:15px Verdana;
+        }
+        th {
+            font-weight:bold;
+        }
+    </style>
+
     <!--<link rel="stylesheet" href="stylesheets/style.css">-->
   <head>
   <body>
@@ -10,5 +24,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/javascripts/index.js"></script>    
+
+    <div id="showData"></div>
   </body>
 </html>
