@@ -1,5 +1,5 @@
 (function() {
-    $("button").click(function() {        
+    $("#sala-button").click(function() {        
         $(location).attr('href', '/room?room=' + $('#sala-input').val());
     });
 })();
@@ -31,6 +31,8 @@ function createTableFromJSON() {
 
         var tr = table.insertRow(-1);                   // TABLE ROW.
 
+        var th = document.createElement("th");
+        tr.appendChild(th);
         for (var i = 0; i < col.length; i++) {
             var th = document.createElement("th");      // TABLE HEADER.
             th.innerHTML = col[i];
@@ -41,6 +43,7 @@ function createTableFromJSON() {
         for (var i = 0; i < dataRoom.length; i++) {
 
             tr = table.insertRow(-1);
+            tr.innerHTML = "<button id=\"sala-button\">Ir</button>";
 
             for (var j = 0; j < col.length; j++) {
                 var tabCell = tr.insertCell(-1);
